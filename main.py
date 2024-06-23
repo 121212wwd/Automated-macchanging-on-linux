@@ -1,6 +1,37 @@
 import subprocess
 import time
 
+# DO NOT CHANGE OPTIONS
+options = print('''
+                                  d8P                                                             
+                               d888888P                                                           
+     d888b8b      ?88   d8P      ?88'       d8888b       88bd8b,d88b      d888b8b       d8888b    
+    d8P' ?88      d88   88       88P       d8P' ?88      88P'`?8P'?8b    d8P' ?88      d8P' `P    
+    88b  ,88b     ?8(  d88       88b       88b  d88     d88  d88  88P    88b  ,88b     88b        
+    `?88P'`88b    `?88P'?8b      `?8b      `?8888P'    d88' d88'  88b    `?88P'`88b    `?888P'
+
+OPTIONS:
+	1: AUTO mac changing
+		Description:
+		Every time ping fails on google.com (not for commercial use)
+		mac changing happens with a program called macchanger
+		if the ping passes, mac changing doesn't happen everyone
+		is happy.
+		if ping fails, macchanging will happen
+		if ping passes macchanging will be on hold
+	2: EXIT
+
+''')
+
+def menu():
+    print(options)
+    try:
+        user_input_options = input(int('what would you like?'))
+        return user_input_options
+    except Warning:
+        print('Incorrect choice, try again.')
+# NEED TO CHANGE THIS
+
 def automated_ping_requests():
     print('Automated connection requests')
     print('')
@@ -65,3 +96,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
